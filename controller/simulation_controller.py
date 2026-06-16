@@ -44,7 +44,7 @@ class SimulationController:
     def build_workers(self,reader_count,writer_count,policy):
         for idx in range(reader_count):
             reader = ReaderThread(
-                worker_id=f"R{idx + 1}",
+                worker_id=f"R - {idx + 1}",
                 access_policy=policy,
                 shared_resource=self.shared_resource,
                 runtime_state=self.runtime_state
@@ -52,7 +52,7 @@ class SimulationController:
             self.worker_pool.append(reader)
         for idx in range(writer_count):
             writer = WriterThread(
-                worker_id=f"W{idx + 1}",
+                worker_id=f"W - {idx + 1}",
                 access_policy=policy,
                 shared_resource=self.shared_resource,
                 runtime_state=self.runtime_state
