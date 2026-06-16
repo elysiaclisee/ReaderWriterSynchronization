@@ -47,12 +47,12 @@ Each approach is analyzed for its advantages, trade-offs, and suitability in dif
 
 ## Conclusion
 
-This project provides a detailed exploration of synchronization challenges in operating systems. By implementing solutions to the Dining Philosophers and Readers-Writers Problems, it highlights key concepts like:
+This project provides a detailed exploration of synchronization challenges in operating systems. By implementing solutions to the Readers-Writers Problems, it highlights key concepts like:
 - Deadlock prevention techniques.  
 - Fair and efficient resource allocation strategies.  
 - Trade-offs between simplicity, fairness, and scalability.  
 
-These problems underscore the complexities of concurrent programming and the importance of designing robust synchronization protocols.
+This problem underscore the complexities of concurrent programming and the importance of designing robust synchronization protocols.
 
 
 ## Possible Improvements
