@@ -13,9 +13,9 @@ class WriterThread(threading.Thread):
 
     def run(self):
 
-        self.runtime_state.append_log(f"{self.worker_id} arrived")
+        self.runtime_state.append_log(f"{self.worker_id} arrived")         # Writer request arrives
         time.sleep(random.uniform(0.1, 1.5))
-        self.access_policy.acquire_write(self.worker_id)
-        self.shared_resource.update()
+        self.access_policy.acquire_write(self.worker_id)        # Request exclusive write permission
+        self.shared_resource.update()  #critical section
         time.sleep(random.uniform(1.0, 3.0))
-        self.access_policy.release_write(self.worker_id)
+        self.access_policy.release_write(self.worker_id) #release resource

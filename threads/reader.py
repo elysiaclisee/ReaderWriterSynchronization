@@ -12,10 +12,10 @@ class ReaderThread(threading.Thread):
         self.shared_resource = shared_resource
         self.runtime_state = runtime_state
     def run(self):
-        self.runtime_state.append_log(f"{self.worker_id} arrived")
-        time.sleep(random.uniform(0.1, 1.5))
-        self.access_policy.acquire_read(self.worker_id)
-        _ = self.shared_resource.read()
+        self.runtime_state.append_log(f"{self.worker_id} arrived")  # reader request arrived
+        time.sleep(random.uniform(0.1, 1.5)) #simulated arrival delay
+        self.access_policy.acquire_read(self.worker_id) #request read permission
+        _ = self.shared_resource.read() #critical section
 
-        time.sleep(random.uniform(1.0, 3.0))
-        self.access_policy.release_read(self.worker_id)
+        time.sleep(random.uniform(1.0, 3.0))  #simulated reading time
+        self.access_policy.release_read(self.worker_id) # release resource
