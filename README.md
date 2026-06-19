@@ -12,7 +12,7 @@ This problem serves as foundational examples for understanding resource sharing 
     - [Writers Priority](#writers-preference)
     - [Fair (Mixed) Approach](#fair-mixed-approach)
 - [Conclusion](#conclusion)
-- [Possible Improvements](#possible-improvements)
+
 
 ## Project Description
 The **Readers-Writers Problem** synchronizes access to a shared resource (e.g., a database) between:
